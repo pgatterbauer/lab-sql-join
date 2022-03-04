@@ -58,7 +58,7 @@ SELECT
 	customer.customer_id, 
     customer.first_name, 
     customer.last_name, 
-    COUNT(payment.amount) as amount_customers 
+    SUM(payment.amount) as total_payment 
 FROM 
 	customer
 LEFT JOIN
